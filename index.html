@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DhaakadScript - Coding Desi Style Mein</title>
+    <meta name="description" content="DhaakadScript: The Haryanvi programming language. Coding ab desi swag ke saath.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚜</text></svg>">
+</head>
+<body>
+
+    <!-- Intro Animation Overlay -->
+    <div id="intro-overlay">
+        <div class="intro-content">
+            <div class="text-container">
+                <h1 class="intro-title" data-text="DhaakadScript">DhaakadScript</h1>
+                <div class="tractor-wrapper">
+                    <div class="tractor">🚜</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo-container">
+            <span class="logo-icon">🚜</span>
+            <span>DhaakadScript</span>
+        </div>
+        <div class="nav-links">
+            <a href="#" class="nav-link" onclick="showSection('hero')">Home</a>
+            <a href="#playground" class="nav-link" onclick="showSection('playground')">Playground</a>
+            <a href="#docs" class="nav-link" onclick="showSection('docs')">Kitaab (Docs)</a>
+        </div>
+        <button class="cta-button" onclick="showSection('playground')">Start Coding</button>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="active-section">
+            <div class="hero-content">
+                <span class="desi-badge">🇮🇳 Shuddh Desi Coding</span>
+                <h1 class="hero-title">Coding. <br><span>Ab Haryanvi Mein.</span></h1>
+                <p class="hero-desc">
+                    Angrezi ki tension chhodo. Apni boli mein logic likho aur system hila do. 
+                    Ye hai DhaakadScript - jahan code chalta nahi, daudta hai.
+                </p>
+                <div class="hero-actions">
+                    <button class="btn-primary" onclick="showSection('playground')">Maidan khol le</button>
+                    <button class="btn-secondary" onclick="showSection('docs')">Seekh le bawlipuchh</button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="code-window">
+                    <div class="window-header">
+                        <div class="dot r"></div><div class="dot y"></div><div class="dot g"></div>
+                    </div>
+                    <div class="window-body">
+                        <span class="hl-kw">thap_le</span> naam = <span class="hl-str">"Tau"</span>;<br>
+                        <span class="hl-kw">bol</span>(<span class="hl-str">"Ram Ram "</span> + naam);<br><br>
+                        <span class="hl-kw">agar</span> (mood == <span class="hl-str">"happy"</span>) {<br>
+                        &nbsp;&nbsp;<span class="hl-kw">bol</span>(<span class="hl-str">"System Paad Denge!"</span>);<br>
+                        }
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Documentation Section (Book Style) -->
+        <section id="docs">
+            <div class="docs-layout">
+                <!-- Sidebar -->
+                <div class="docs-sidebar">
+                    <div class="docs-nav-item active" onclick="openDocTab('intro')">1. Parichay (Intro)</div>
+                    <div class="docs-nav-item" onclick="openDocTab('start')">2. Pehla Kadam</div>
+                    <div class="docs-nav-item" onclick="openDocTab('vars')">3. Maal-Paani (Variables)</div>
+                    <div class="docs-nav-item" onclick="openDocTab('ops')">4. Hisab-Kitab (Operators)</div>
+                    <div class="docs-nav-item" onclick="openDocTab('control')">5. Rasta (Control Flow)</div>
+                    <div class="docs-nav-item" onclick="openDocTab('loops')">6. Geda/Chakkar (Loops)</div>
+                    <div class="docs-nav-item" onclick="openDocTab('funcs')">7. Kaam-Dhanda (Functions)</div>
+                    <div class="docs-nav-item" onclick="openDocTab('dsa')">8. DSA Roadmap 🚀</div>
+                </div>
+
+                <!-- Content Area -->
+                <div class="docs-content">
+                    
+                    <!-- 1. Intro -->
+                    <div id="doc-intro" class="doc-section active">
+                        <h2>Parichay (Introduction)</h2>
+                        <p>DhaakadScript ek aisi programming language hai jo seedha dil se nikalti hai. Ye JavaScript ke upar bani hai, par iske keywords aur andaaz poora Haryanvi hai.</p>
+                        
+                        <div class="doc-block">
+                            <h3>Kyun banayi ye?</h3>
+                            <p>Coding seekhna kabhi-kabhi boring ho jata hai. DhaakadScript ka maksad hai coding ko mazedaar aur apni bhasha mein feel karwana.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2. Getting Started -->
+                    <div id="doc-start" class="doc-section">
+                        <h2>Pehla Kadam</h2>
+                        <p>Sabse pehle, screen pe kuch likh ke dekhte hain.</p>
+                        
+                        <h3>Hello World (Ram Ram)</h3>
+                        <p>Kisi bhi cheez ko print karne ke liye <code>bol</code> keyword ka use karein.</p>
+                        <div class="code-snippet">bol("Ram Ram Saareyan Ne!");</div>
+                        
+                        <p>Output:</p>
+                        <pre>> Ram Ram Saareyan Ne!</pre>
+
+                        <h3>Bol (Print)</h3>
+                        <p>Jo muh mein hai, wo terminal pe bol de. Debug ya dialogue – sab yahan se.</p>
+                    </div>
+
+                    <!-- 3. Variables -->
+                    <div id="doc-vars" class="doc-section">
+                        <h2>Maal-Paani (Variables)</h2>
+                        <p>Naya variable thap de (declare kar de). Naam de aur value chipka de.</p>
+                        <p>“Jab bhi kuch yaad rakhna ho – naam, umar, marks – sab ko thap_le se shuru kara.”</p>
+                        
+                        <h3>Syntax</h3>
+                        <div class="code-snippet">thap_le naam = "Raju";
+thap_le umar = 25;
+thap_le pass_hai = sahi;</div>
+
+                        <h3>Booleans (Sahi / Galat)</h3>
+                        <p>Haryanvi true/false. Jo baat pakki ho, wo <code>sahi</code>. Jo jhooth ya nakli ho, wo <code>galat</code>.</p>
+                    </div>
+
+                    <!-- 4. Operators -->
+                    <div id="doc-ops" class="doc-section">
+                        <h2>Hisab-Kitab (Operators)</h2>
+                        <p>Jod-ghata aur tulna karne ke liye operators chahiye.</p>
+                        
+                        <h3>Ganit (Math)</h3>
+                        <p><code>+</code>, <code>-</code>, <code>*</code>, <code>/</code> sab waise hi kaam karte hain.</p>
+                        <div class="code-snippet">thap_le x = 10 + 5; // 15
+thap_le y = x * 2;  // 30</div>
+
+                        <h3>Tulna (Comparison)</h3>
+                        <p><code>></code>, <code><</code>, <code>==</code>, <code>!=</code> use karein.</p>
+                        <div class="code-snippet">agar (umar >= 18) {
+  bol("Vote daal le bhai");
+}</div>
+                    </div>
+
+                    <!-- 5. Control Flow -->
+                    <div id="doc-control" class="doc-section">
+                        <h2>Rasta (Control Flow)</h2>
+                        <p>Condition ke hisaab se decision lene ka jugad. Pehle <code>agar</code>, fir zarurat ho to <code>aur_agar</code>, warna last option <code>na_ta</code>.</p>
+                        
+                        <h3>Agar - Magar</h3>
+                        <div class="code-snippet">thap_le paise = 100;
+
+agar (paise > 500) {
+  bol("Party karenge!");
+} 
+aur_agar (paise > 50) {
+  bol("Chai piyenge.");
+} 
+na_ta {
+  bol("Ghar baithenge.");
+}</div>
+                    </div>
+
+                    <!-- 6. Loops -->
+                    <div id="doc-loops" class="doc-section">
+                        <h2>Geda/Chakkar (Loops)</h2>
+                        
+                        <h3>Jab Tak (While Loop)</h3>
+                        <p>Jab tak condition sahi rahe, utni der chakkar lagata rahe.</p>
+                        <div class="code-snippet">thap_le petrol = 5;
+
+jab_tak (petrol > 0) {
+  bol("Gaddi chal rahi hai...");
+  petrol = petrol - 1;
+}</div>
+
+                        <h3>Kitni Baar (For Loop)</h3>
+                        <p>Seedha counting loop – kitni baar ghoomna hai, pehle hi bata de.</p>
+                        <div class="code-snippet">kitni_baar (i = 0; i < 5; i++) {
+  bol("Round number: " + i);
+}</div>
+                    </div>
+
+                    <!-- 7. Functions -->
+                    <div id="doc-funcs" class="doc-section">
+                        <h2>Kaam-Dhanda (Functions)</h2>
+                        <p>Reuse wali cheez. Ek baar likh, kaam ka naam rakh, jahan chahe baar-baar bula. Answer bhejne ke liye <code>wapas_de</code> laga.</p>
+                        
+                        <h3>Function Banana</h3>
+                        <div class="code-snippet">kaam jod(a, b) {
+  wapas_de a + b;
+}
+
+thap_le total = jod(10, 20);
+bol("Total hua: " + total);</div>
+                    </div>
+
+                    <!-- 8. DSA Roadmap -->
+                    <div id="doc-dsa" class="doc-section">
+                        <h2>DSA Roadmap (Dhaakad Version)</h2>
+                        <p>Data Structures aur Algorithms seekhne ka desi tareeka.</p>
+
+                        <div class="doc-block">
+                            <h3>1. Basics</h3>
+                            <p>Loops, Conditionals, aur Functions ka template.</p>
+                            <div class="code-snippet">
+// For Loop
+kitni_baar (i = 0; i < n; i++) { ... }
+
+// While Loop
+jab_tak (condition) { ... }
+
+// Function
+kaam kuch_kaam(p1, p2) { wapas_de result; }
+                            </div>
+                        </div>
+
+                        <div class="doc-block">
+                            <h3>2. Arrays & Searching</h3>
+                            <p>Linear aur Binary Search.</p>
+                            <div class="code-snippet">
+// Linear Search
+kaam dhund_le(arr, target) {
+  kitni_baar (i = 0; i < arr.length; i++) {
+    agar (arr[i] == target) { wapas_de i; }
+  }
+  wapas_de -1;
+}
+                            </div>
+                        </div>
+
+                        <div class="doc-block">
+                            <h3>3. Sorting</h3>
+                            <p>Bubble Sort aur Insertion Sort.</p>
+                            <div class="code-snippet">
+// Bubble Sort
+kaam bubble_sort(arr) {
+  thap_le n = arr.length;
+  kitni_baar (i = 0; i < n - 1; i++) {
+    kitni_baar (j = 0; j < n - 1 - i; j++) {
+      agar (arr[j] > arr[j + 1]) {
+        thap_le temp = arr[j];
+        arr[j] = arr[j + 1];
+        arr[j + 1] = temp;
+      }
+    }
+  }
+  wapas_de arr;
+}
+                            </div>
+                        </div>
+                        
+                        <p>Aur bhi topics hain: Recursion, Stack/Queue, Trees, Graphs, DP. Playground mein "Examples" dropdown se code load karke dekho!</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Playground Section -->
+        <section id="playground">
+            <div class="playground-wrapper">
+                <div class="playground-header">
+                    <h2>Playground</h2>
+                    <div class="header-controls">
+                        <select id="example-selector" onchange="loadExample()">
+                            <option value="">-- Load Example --</option>
+                            <option value="linear_search">Linear Search</option>
+                            <option value="binary_search">Binary Search</option>
+                            <option value="bubble_sort">Bubble Sort</option>
+                            <option value="insertion_sort">Insertion Sort</option>
+                            <option value="reverse_string">Reverse String</option>
+                            <option value="palindrome">Palindrome Check</option>
+                            <option value="factorial">Factorial (Recursion)</option>
+                            <option value="fibonacci">Fibonacci (Recursion)</option>
+                            <option value="stack">Stack (LIFO)</option>
+                            <option value="queue">Queue (FIFO)</option>
+                            <option value="linked_list">Linked List</option>
+                            <option value="bst">BST Traversal</option>
+                            <option value="bfs">Graph BFS</option>
+                        </select>
+                        <button class="run-btn" onclick="runCode()">
+                            <span>▶ RUN KARO</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="playground-main">
+                    <div class="editor-pane">
+                        <div class="pane-title">📝 Source Code</div>
+                        <textarea id="code-editor" spellcheck="false">
+// DhaakadScript Demo
+
+thap_le naam = "Chaudhary";
+bol("Ram Ram " + naam + " sahab!");
+
+// Ek loop ka example
+thap_le power = 10;
+jab_tak (power < 50) {
+  bol("Power badh rahi hai: " + power + "%");
+  power = power + 20;
+}
+
+agar (power >= 50) {
+  bol("System set hai!");
+}</textarea>
+                    </div>
+                    <div class="terminal-pane">
+                        <div class="pane-title">
+                            <span>📟 Terminal</span>
+                            <span style="color: #888; font-size: 0.8em; font-weight: normal; margin-left: 10px;">// Yahan gaali nahi, sirf roasting allowed se.</span>
+                            <span style="color: #4CAF50; font-size: 0.8em; margin-left: auto;">● ONLINE</span>
+                        </div>
+                        <div id="output-console">
+                            <div style="color: #666; font-style: italic;">// Pehle code likh le re, fir RUN daba.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
