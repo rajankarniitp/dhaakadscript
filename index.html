@@ -72,6 +72,9 @@
 
         <!-- Documentation Section (Book Style) -->
         <section id="docs">
+            <div class="section-header">
+                <button class="back-btn" onclick="showSection('hero')">← Back</button>
+            </div>
             <div class="docs-layout">
                 <!-- Sidebar -->
                 <div class="docs-sidebar">
@@ -266,6 +269,9 @@ kaam bubble_sort(arr) {
         <section id="playground">
             <div class="playground-wrapper">
                 <div class="playground-header">
+                    <div class="header-controls">
+                        <button class="back-btn" onclick="showSection('hero')">← Back</button>
+                    </div>
                     <h2>Playground</h2>
                     <div class="header-controls">
                         <select id="example-selector" onchange="loadExample()">
