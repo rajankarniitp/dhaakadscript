@@ -1,4 +1,4 @@
-# DhaakadScript 🚜
+# DhaakadScript 🚜 URL - dhaakadscript.netlify.app
 
 **Coding. Ab Haryanvi mein.**
 
